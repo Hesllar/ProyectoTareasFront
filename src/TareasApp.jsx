@@ -1,7 +1,10 @@
+import { AppRouter } from "./router/AppRouter"
 
 
 export const TareasApp = () => {
     return (
-        <div>TareasApp</div>
+        <>
+            <AppRouter />
+        </>
     )
 }
