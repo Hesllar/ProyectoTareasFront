@@ -1,0 +1,18 @@
+#logo{
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 80px;
+    width: 80px;
+}
+#Menu-a{
+    color: #ffffff;
+    border-radius: 15px;
+    transition: all 400ms ease;
+    margin-right: 5px;
+    font-size: 17px;
+
+}
+#Menu-a:hover{
+    color: white;  
+    background-color: rgb(102, 88, 134);  
+}
