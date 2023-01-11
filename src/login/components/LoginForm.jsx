@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from '../hooks/useForm';
+import img from "../../assets/imagenes";
 
 export const LoginForm = () => {
 
@@ -40,34 +41,62 @@ export const LoginForm = () => {
 
     return (
         <form onSubmit={submitForm}>
-            <div className="mb-3">
-                <label
-                    className="form-label"
-                >
-                    Nombre usuario
-                </label>
-                <input
-                    className='form-control'
-                    type="text"
-                    name="userName"
-                    value={userName}
-                    onChange={onInputChange}
-                />
+            <div className='container'>
+                <div className='row justify-content-center'>
+                    <div className='col-2'>
+                        <img id="logo-login" src={img.img3}/>
+                    </div>   
+                </div>
             </div>
-            <div className="mb-3">
-                <label className="form-label">Contraseña</label>
-                <input
-                    className='form-control'
-                    type="text"
-                    name="password"
-                    value={password}
-                    onChange={onInputChange}
-                />
+            <br />
+            <div id='ContenedorLogin'>          
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-3 text-center'>
+                            <h1>Iniciar Sesión</h1>
+                        </div>   
+                    </div>
+                </div>
+                <hr />
+                
+                <div className="mb-3">
+                    <label
+                        className="form-label"
+                    >
+                        Nombre usuario
+                    </label>
+                    <input
+                        className='form-control'
+                        type="text"
+                        name="userName"
+                        value={userName}
+                        onChange={onInputChange}
+                    />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Contraseña</label>
+                    <input
+                        className='form-control'
+                        type="text"
+                        name="password"
+                        value={password}
+                        onChange={onInputChange}
+                    />
+                </div>
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-lg-1 col-sm-3 text-center'>
+                            <div className="mb-3">
+                                <button className='btn btn-primary' type='submit'>Enviar</button>
+                            </div> 
+                        </div>      
+                    </div>
+                </div>
+                
+                <br />
             </div>
-
-            <div className="mb-3">
-                <button className='btn btn-primary' type='submit'>Enviar</button>
-            </div>
+            
         </form>
+        
     )
 }

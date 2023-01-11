@@ -4,6 +4,10 @@
     height: 80px;
     width: 80px;
 }
+#logo-login{
+    height: 100%;
+    width: 100%;
+}
 #Menu-a{
     color: #ffffff;
     border-radius: 15px;
@@ -15,4 +19,11 @@
 #Menu-a:hover{
     color: white;  
     background-color: rgb(102, 88, 134);  
+}
+#ContenedorLogin{
+    background-color: rgb(173, 230, 218);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px  rgba(0,0,0,0.4);
+
 }

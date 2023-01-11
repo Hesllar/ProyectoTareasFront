@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import img from "../assets/imagenes";
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
         <div class="row justify-content-center">
         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
             <br/>
-            {/* <img src="/public/traNB.png" alt=""> */}
+            <img src={img.img1}/>
         </div>
     
         <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
