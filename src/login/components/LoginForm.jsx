@@ -14,24 +14,35 @@ export const LoginForm = () => {
 
         e.preventDefault();
 
-        const config = {
+        let config = {
             method: 'POST',
             body: JSON.stringify(formState),
             headers: { 'Content-Type': 'application/json' }
         }
 
-        const res = await fetch('http://localhost:5001/api/v1/usuario/validar-login-usuario', config);
+        const resLogin = await fetch('http://localhost:5001/api/v1/usuario/validar-login-usuario', config);
 
-        const resJson = await res.json();
+        let resJson = await resLogin.json();
 
-        const { status, message } = resJson;
+        const { status, message, response } = resJson;
 
         if (!status) {
             alert(message);
             return;
         }
 
-        alert(message);
+        config = {
+            method: 'POST',
+            body: JSON.stringify({ usuarioId: response.id_user }),
+            headers: { 'Content-Type': 'application/json' }
+        }
+
+        const resToken = await fetch('http://localhost:5001/api/v1/token/create-token', config);
+
+        resJson = await resToken.json();
+
+        localStorage.setItem('token', resJson.response.token);
+        localStorage.setItem('usuario', JSON.stringify(response));
 
         onResetForm();
     }

@@ -8,7 +8,7 @@ export const TareaRoute = () => {
             <Routes>
                 <Route path="home" element={<Tarea />} />
 
-                <Route path="/" element={<Navigate to="/" />} />
+                <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
         </div>
     )
